@@ -1,14 +1,26 @@
-import { useState } from "react";
-import { cn } from "./lib/utils";
+import { RouterProvider } from "react-router-dom"
+import { PostProvider } from "./context/PostContext"
+import { TagProvider } from "./context/TagContext"
+import { UserProvider } from "./context/UserContext"
+import router from "./route"
+import { Toaster } from "react-hot-toast"
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <h1 className={cn("text-red-100")}>Tekblog</h1>
-    </>
-  );
+    return (
+        <UserProvider>
+            <PostProvider>
+                <TagProvider>
+                    <RouterProvider router={router} />
+                    <Toaster
+                        position='bottom-center'
+                        toastOptions={{
+                            duration: 2000
+                        }}
+                    />
+                </TagProvider>
+            </PostProvider>
+        </UserProvider>
+    )
 }
 
-export default App;
+export default App
