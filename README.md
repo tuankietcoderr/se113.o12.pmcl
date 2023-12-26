@@ -3,11 +3,11 @@
 ## Installation
 
 ```
-git clone https://github.com/tuankietcoderr/tekblog-fe.git
+git clone https://github.com/tuankietcoderr/se113.o12.pmcl.git
 ```
 
 ```
-cd tekblog-fe
+cd se113.o12.pmcl
 ```
 
 ### Using yarn
